@@ -1,0 +1,26 @@
+in:
+  type:
+    name: config
+  columns:
+    - {name: "ga:date", type: string}
+    - {name: "ga:source", type: string}
+    - {name: "ga:medium", type: string}
+    - {name: "ga:adClicks", type: long}
+    - {name: "ga:impressions", type: long}
+    - {name: "ga:adCost", type: long}
+  values:
+    - - ["20171201", "yahoo", "cpc", 23, 540, 1200]
+      - ["20171202", "yahoo", "cpc", 23, 540, 1200]
+      - ["20171203", "yahoo", "cpc", 23, 540, 1200]
+      - ["20171204", "yahoo", "cpc", 23, 540, 1200]
+out:
+  type: google_analytics
+  action: dataimport
+  client_id: xxxxxxxxx.apps.googleusercontent.com
+  client_secret: yyyyyyyyyyyyyyy
+  refresh_token: 1/zzzzzzzzzzzzzzzzzzzzz
+  account_id: xyz
+  webproperty_id: UA-xyz-a
+  datasource_id: xxxxxxxxxxxxx
+  filename: "Sample Cost Data.csv"
+
